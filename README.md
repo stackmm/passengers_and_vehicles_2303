@@ -123,4 +123,17 @@ Method Name                 | Return Value (type)
 
 ## Iteration 4
 
-The National Park Service has given you additional functionality it would like you to implement. They would like to be able to track patrons of their parks. They would like to be able to generate a list of names of all attendees, as well as generate a list of minors and a list of adults. It would like all of these lists to be sorted alphabetically.
+The National Park Service has given you additional functionality it would like you to implement. They would like to be able to track patrons of their parks. 
+
+1. Generate a list of all `all_attendees` names, sorted alphabetically.
+2. Generate a list of all `minors` names, sorted alphabetically.
+3. Generate a list of all `adults` names, sorted alphabetically.
+
+Build upon your existing code from the first three iterations to implement this functionality.
+
+Method Name                 | Return Value (type)
+-----------                 | -------------------
+`all_attendees`             | `Array` of `Passenger names as strings`
+`minors`                    | `Array` of `Passengers who are minors; names as strings`
+`adults`                    | `Array` of `Passengers who are adults; names as strings`
+
