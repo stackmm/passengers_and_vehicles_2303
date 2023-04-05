@@ -50,4 +50,14 @@ class Park
     end.sort
   end
 
+  def adults
+    adults = passengers.find_all do |passenger|
+      passenger.adult?
+    end
+
+    adults.map do |adult|
+      adult.name
+    end.sort
+  end
+
 end
