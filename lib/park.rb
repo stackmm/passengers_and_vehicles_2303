@@ -1,26 +1,37 @@
 class Park
-  attr_reader :name, :admission_price, 
-              :vehicles, :passengers,
-              :revenue
+  attr_reader :name, :admission_price, :vehicles
 
   def initialize(name, admission_price)
     @name = name
     @admission_price = admission_price
     @vehicles = []
-    @passengers = []
-    @revenue = 0
   end
 
   def add_vehicle(vehicle)
     @vehicles << vehicle
+  end
 
-    #adds each passenger to @passengers when a vehicle is added to the park & charges admission
-    vehicle.passengers.each do |passenger|
-      @passengers << passenger
-      if passenger.adult?
-        @revenue += @admission_price
+  def passengers
+    list_of_passengers = []
+    @vehicles.each do |vehicle|
+      vehicle.passengers.each do |passenger|
+        list_of_passengers << passenger
       end
     end
+    list_of_passengers
+  end
+
+  def revenue
+    revenue = 0
+    
+    @vehicles.each do |vehicle|
+      vehicle.passengers.each do |passenger|
+        if passenger.adult?
+          revenue += @admission_price
+        end
+      end
+    end
+    revenue
   end
 
 end
