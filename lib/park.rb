@@ -23,7 +23,7 @@ class Park
 
   def revenue
     revenue = 0
-    
+
     @vehicles.each do |vehicle|
       vehicle.passengers.each do |passenger|
         if passenger.adult?
@@ -32,6 +32,12 @@ class Park
       end
     end
     revenue
+  end
+
+  def all_attendees
+    passengers.map do |passenger|
+      passenger.name
+    end.sort
   end
 
 end
